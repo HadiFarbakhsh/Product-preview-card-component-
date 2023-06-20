@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: hsl(30, 38%, 92%);
+  font-size: 14px;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.maincontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 600px;
+  border-radius: 15px;
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
+  margin: 10px;
+}
+
+.image {
+  background: url(images/image-product-desktop.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.description {
+  padding: 2rem;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.2rem;
+  color: hsl(228, 12%, 48%);
+  text-align: left;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 31px;
+  margin-bottom: 22px;
+  color: hsl(212, 21%, 14%);
+  line-height: 1.1;
+  text-align: left;
+}
+
+p {
+  color: hsl(228, 12%, 48%);
+  line-height: 1.5;
+}
+
+.price {
+  margin-top: 30px;
+  line-height: 1;
+}
+
+.new_Price {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: hsl(158, 36%, 37%);
+  margin: 0 20px 0 0;
+  vertical-align: sub;
+}
+
+.old_Price {
+  color: hsl(228, 12%, 48%);
+}
+
+button {
+  position: relative;
+  font-weight: 700;
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  border-style: none;
+  border-radius: 5px;
+  padding: 15px 0;
+  text-align: center;
+  transition: 0.5s;
+  margin-top: 30px;
+}
+
+button img {
+  position: absolute;
+  left: 25%;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: hsl(212, 21%, 14%);
+}
+.attribution {
+  position: absolute;
+  font-size: 12px;
+  text-align: center;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution a {
+  color: hsl(228, 87%, 49%);
+}
+
+.attribution a:hover {
+  color: rgb(200, 31, 31);
+}
+
+@media (max-width: 600px) {
+  .maincontainer {
+    max-width: 360px;
+    margin-top: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr;
+  }
+
+  .image {
+    background: url(images/image-product-mobile.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+
+  .attribution {
+    position: relative;
+    font-size: 10px;
+    bottom: 20%;
+  }
+}
